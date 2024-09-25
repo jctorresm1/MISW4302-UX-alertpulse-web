@@ -1,0 +1,32 @@
+<mat-card [ngStyle]="{'background': getCardBackground()}">
+    <mat-grid-list cols="12" rowHeight="75px">
+
+      <mat-grid-tile [colspan]="3">
+        <img [src]="reminder?.imageUrl" alt="Reminder Icon" class="reminder-icon" />
+      </mat-grid-tile>
+  
+  
+      <mat-grid-tile [colspan]="6">
+        <div class="task-details">
+          <label class="task-name" [ngStyle]="{'text-decoration': getTaskTextDecoration()}">
+            {{ reminder?.reminderText }}
+          </label>
+          <label class="task-hour">{{ reminder?.hour }}</label>
+          <label class="task-date">{{ reminder?.date }}</label>
+        </div>
+      </mat-grid-tile>
+  
+      <div *ngIf="shareable">
+        <mat-grid-tile [colspan]="3" class="task-completed">
+          <mat-slide-toggle *ngIf="reminder" [(ngModel)]="reminder.shared">Compartido</mat-slide-toggle>
+        </mat-grid-tile>
+      </div>
+
+      <mat-grid-tile *ngIf="!shareable" [colspan]="3" class="task-completed">
+        <mat-slide-toggle *ngIf="reminder" [(ngModel)]="reminder.completed">Completado</mat-slide-toggle>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="12"></mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+  

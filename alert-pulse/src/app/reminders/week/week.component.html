@@ -1,0 +1,13 @@
+<div class="thisweek-reminders-container">
+    <h3>Recordatorios de esta semana</h3>    
+    <div class="reminder-by-date">
+        <h5>{{ reminderByDate[0].date | date: 'EEEE - MMMM d' }}</h5>
+        <mat-divider></mat-divider>  
+        <div *ngFor="let reminders of reminderByDate">  
+            <div class="reminder-cards">
+                <app-reminder-card *ngFor="let reminder of reminders.remindersThisDay" [reminder]="reminder">
+                </app-reminder-card>
+            </div>
+        </div>
+    </div>
+</div>

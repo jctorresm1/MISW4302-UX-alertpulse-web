@@ -1,0 +1,11 @@
+<div class="shared-reminders-container">
+    <h3>Recordatorios para compartir</h3>
+    <mat-divider></mat-divider>
+    <div class="reminder-cards">
+        <app-reminder-card
+        *ngFor="let reminder of reminders"
+        [reminder]="reminder" [shareable]="true">
+      </app-reminder-card>
+    </div>
+</div>
+  

@@ -1,0 +1,68 @@
+.registration-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 55%;
+  margin: 5%;
+  padding-top: 2em; 
+  background-color: #35628d47;
+  margin-top: 2em;
+
+}
+
+.registration-form {
+
+  display:block;
+  padding-right: 30px;
+}
+
+.registration-content::before {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../../public/background_waves.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; 
+  z-index: -1; 
+}
+  
+  .title-actions-container {    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    padding-top: 15px;
+    background-color: rgba(247, 249, 255, 0.55);
+  }
+  
+  .actions {
+    display: flex;
+    margin-right: 2%;
+    margin-top: 1%;
+    gap: 10px;
+  }
+  
+  .registration-content {
+    width: 60%;
+    padding: 20px;
+  }
+  
+  .registration-image-container {
+    width: 40%;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 70%;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  

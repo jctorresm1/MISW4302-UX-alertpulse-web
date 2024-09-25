@@ -1,0 +1,40 @@
+.thisweek-reminders-container {
+    padding: 16px;
+  }
+  
+  .reminder-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+  }
+
+  .thisweek-reminders-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../../public/background_waves.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; 
+    z-index: -1; 
+  }
+
+  .reminder-by-date {
+    display: contents;    
+    align-items: center;
+    padding-top:3em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    border-radius: 10px;
+  }
+
+  mat-divider {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    stroke-width: 0.2px;
+  }
+  

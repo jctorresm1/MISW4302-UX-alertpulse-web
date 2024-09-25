@@ -1,0 +1,65 @@
+<main class="registration-container">    
+    <div class="title-actions-container">
+      <h3>Agregar nuevo recordatorio</h3>
+      <div class="actions">
+        <button mat-button (click)="onCancel()">Cancelar</button>
+        <button mat-raised-button color="primary" [disabled]="reminderForm.invalid" (click)="onSave()">Guardar</button>
+      </div>
+    </div>
+  
+    <div class="registration-content">
+      <!-- Form Container -->
+      <form [formGroup]="reminderForm" class="registration-form">
+        <mat-form-field appearance="fill">
+          <mat-label>Descripción del recordatorio</mat-label>
+          <input matInput formControlName="reminderText" maxlength="100" />
+          <mat-hint align="end">{{ reminderForm.controls['reminderText'].value?.length || 0 }} / 100</mat-hint>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha del recordatorio</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="date" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Hora del recordatorio</mat-label>
+          <input matInput formControlName="hour" placeholder="hh:mm AM/PM" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Duración</mat-label>
+          <mat-select formControlName="duration">
+            <mat-option value="5 Minutos">5 Minutos</mat-option>
+            <mat-option value="30 Minutos">30 Minutos</mat-option>
+            <mat-option value="1 Hora">1 Hora</mat-option>
+            <mat-option value="Todo el dia">Todo el dia</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Tono del recordatorio</mat-label>
+          <mat-select formControlName="selectedTone">
+            <mat-option value="Luna">Luna</mat-option>
+            <mat-option value="Sahara">Sahara</mat-option>
+            <mat-option value="Dunas">Dunas</mat-option>
+            <mat-option value="Viento">Viento</mat-option>
+          </mat-select>
+          <button mat-icon-button>
+            <mat-icon>play_arrow</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <mat-slide-toggle formControlName="shared">Compartido</mat-slide-toggle>
+      </form>
+
+      <div class="registration-image-container">
+        <img src="tosleep.png" alt="Image" class="registration-image" />
+      </div>
+    </div>
+  
+    <!-- Image Container -->
+   
+  </main>
+  

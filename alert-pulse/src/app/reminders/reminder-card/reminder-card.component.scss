@@ -1,0 +1,37 @@
+mat-card {
+    padding-top: 0.7em;
+    border-radius: 8px;
+    max-width: 78%;
+    color: rgb(0, 0, 0);
+  }
+  
+  .reminder-icon {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .task-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .task-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .task-hour, .task-date {
+    font-size: 0.9rem;
+    color: #5c5c5c;
+  }
+  
+  .task-completed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
