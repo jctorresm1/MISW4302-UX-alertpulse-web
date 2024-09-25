@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="reminder-drawer">
+      <header class="reminder-header">
+        <h2 class="reminder-title">Mis Recordatorios</h2>
+      </header>
+      <mat-divider></mat-divider>
+      <mat-list>
+        <mat-list-item>
+          <button mat-button class="reminder-button" [routerLink]="['today']">
+            <img src="today.png"
+              alt="" class="reminder-icon" />
+            <span class="reminder-label">Hoy</span>
+          </button>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <button mat-button class="reminder-button" [routerLink]="['week']">
+            <img src="thisWeek.png"
+              alt="" class="reminder-icon" />
+            <span class="reminder-label">Esta Semana</span>
+          </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <button mat-button class="reminder-button" [routerLink]="['shared']">
+              <img src="share.png"
+                alt="" class="reminder-icon" />
+              <span class="reminder-label">Compartidos</span>
+            </button>
+          </mat-list-item>
+      </mat-list>
+
+
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <!-- The child routes (today, week) will be loaded here -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

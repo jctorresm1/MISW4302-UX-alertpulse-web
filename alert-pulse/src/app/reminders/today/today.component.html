@@ -1,0 +1,16 @@
+<div class="today-reminders-container">
+    <h3>Recordatorios de hoy</h3>
+    <mat-divider></mat-divider>
+    <!-- Use *ngFor to render ReminderCardComponent for each reminder -->
+    <div class="reminder-cards">
+        <app-reminder-card
+        *ngFor="let reminder of reminders"
+        [reminder]="reminder">
+      </app-reminder-card>
+    </div>
+
+    <button mat-fab class="add-reminder-fab" (click)="navigateToAddNew()">
+      <img src="plus.png" alt="Plus Icon" class="fab-icon"/>
+    </button>
+</div>
+  

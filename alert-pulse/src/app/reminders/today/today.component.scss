@@ -1,0 +1,45 @@
+.today-reminders-container {
+    padding: 16px;
+    position: relative;
+  }
+  
+  .reminder-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+  }
+
+  .today-reminders-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../../public/background_waves.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; 
+    z-index: -1; 
+  }
+
+  
+  .add-reminder-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #35638d;
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  
+    /* Ensure the image inside is correctly styled */
+    .fab-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+  
