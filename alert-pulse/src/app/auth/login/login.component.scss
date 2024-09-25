@@ -1,0 +1,99 @@
+
+
+.registration-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 3em; 
+    background-color: #35628d47;
+    margin-top: 5em;
+
+  }
+
+.registration-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../../public/background_waves.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+
+  .registration-content {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 306px;
+    flex-grow: 1;
+    padding-left: 0.5em;
+  }
+  
+  .registration-title {
+    color: #000;
+    font: 400 22px/1 Roboto, sans-serif;
+    margin-bottom: 16px;
+  }
+  
+  .login-prompt {
+    color: #000;
+    font: 500 16px Roboto, sans-serif;
+    letter-spacing: 0.15px;
+    margin-bottom: 13px;
+  }
+  
+  .registration-form {
+    width: 100%;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .submit-button {
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    width: 130px;
+    max-width: 100%;
+    margin-top: 5px;
+    padding: 10px 19px 10px 12px;
+    background-color: rgba(29, 27, 32, 0.12);
+    color: #1d1b20;
+    font: 500 14px/20px Roboto, sans-serif;
+    letter-spacing: 0.1px;
+  }
+  
+  .button-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+  
+  .registration-image-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+  }
+  
+  .registration-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  
